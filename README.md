@@ -1,6 +1,7 @@
 # python-diary
 Data base for potential Python blog posts.
 
+
 ## 2020-07-13 - Check Data Frame for NaN's
 
 To check a Pandas data frame, call it `df`, for NaN values, simply execute
