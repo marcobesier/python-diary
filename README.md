@@ -1,5 +1,24 @@
 # python-diary
-Data base for potential Python blog posts.
+Some useful notes on Python.
+
+## 2020-08-26 - Remove the Middle Item of a List of Odd Length
+
+```
+>>> odd_list = [1, 2, 3, 4, 5]
+>>> del odd_list[len(odd_list)//2]
+>>> odd_list
+[1, 2, 4, 5]
+```
+
+## 2020-08-26 - Two Ways to Print a Rounded Float
+
+```
+>>> some_float = 1.23456789
+>>> print('The rounded float is: {}'.format(round(some_float, 2)))
+The rounded float is: 1.23
+>>> print('The rounded float is: %.2f' % some_float)
+The rounded float is: 1.23
+```
 
 ## 2020-08-04 - Selecting Data Frame Rows With `isin`
 
