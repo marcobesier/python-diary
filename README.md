@@ -1,6 +1,50 @@
 # python-diary
 Some useful notes on Python.
 
+## 2020-08-28 - Why You Want to Avoid Loops
+
+Whenever possible, you want to use vector operations over loops.
+
+Suppose you need to determine the intersection of two lists.
+```
+>>> list_a = list(range(0, 50000))
+>>> list_b = list(range(25000, 75000))
+```
+One way to accomplish this is to use a for-loop. This approach is, however, extremely slow:
+```
+>>> import time
+>>> def intersection_of(list_1, list_2):
+...     start = time.time()
+...     intersection = []
+...     for element in list_1:
+...             if element in list_2:
+...                     intersection.append(element)
+...     return len(intersection), time.time() - start
+...
+>>> print(intersection_of(list_a, list_b))
+(25000, 18.548768997192383)
+```
+Compare this to NumPy's `intersect1d` method:
+```
+>>> import numpy as np
+>>> def intersection_of(list_1, list_2):
+...     start = time.time()
+...     intersection = np.intersect1d(list_1, list_2)
+...     return len(intersection), time.time() - start
+...
+>>> print(intersection_of(list_a, list_b))
+(25000, 0.017508268356323242)
+```
+Related to that: Know your data structures and which methods are faster! For example, given that both of our lists have no duplicate entries, we can also use the following code, which is even faster than NumPy's `intersect1d` method:
+```
+>>> def intersetction_of(list_1, list_2):
+...     start = time.time()
+...     intersection = set(list_1).intersection(set(list_2))
+...     return len(intersetion), time.time() - start
+...
+>>> print(intersection_of(list_a, list_b))
+(25000, 0.014182090759277344)
+```
 ## 2020-08-27 - Replace Blank Spaces With Underscores in Column Names
 
 You'll often want to replace blank spaces with underscores in the column headers
