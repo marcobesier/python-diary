@@ -45,6 +45,18 @@ Related to that: Know your data structures and which methods are faster! For exa
 >>> print(intersection_of(list_a, list_b))
 (25000, 0.014182090759277344)
 ```
+Update: I just realized that this code runs even faster if you don't convert the second list to a set:
+```
+>>> def intersection_of(list_1, list_2):
+...     start = time.time()
+...     intersection = set(list_1).intersection(list_2)
+...     return len(intersection), time.time() - start
+...
+>>> list_b = list(range(25000, 75000))
+>>> print(intersection_of(list_a, list_b))
+(25000, 0.006947755813598633)
+```
+
 ## 2020-08-27 - Replace Blank Spaces With Underscores in Column Names
 
 You'll often want to replace blank spaces with underscores in the column headers
