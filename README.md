@@ -1,6 +1,54 @@
 # python-diary
 Some useful notes on Python.
 
+## 2020-08-27 - Replace Blank Spaces With Underscores in Column Names
+
+You'll often want to replace blank spaces with underscores in the column headers
+of a data frame to be able to use dot notation when accessing the columns.
+
+Consider, for example, the following data frame:
+```
+>>> import pandas as pd
+>>> df = pd.DataFrame({'column one': [1, 2], 'column two': [3, 4]})
+>>> print(df)
+   column one  column two
+0           1           3
+1           2           4
+```
+One way to rename its columns is:
+```
+>>> df = df.rename(columns={'column one': 'column_one', 'column two': 'column_two'})
+```
+This approach is, however, error-prone and becomes super tedious as soon as we
+have more than just a few columns.
+
+An alternative way that quickly becomes more efficient as soon as you deal with
+larger data frames is to use the `replace` method while looping through the
+column headers:
+```
+>>> labels = list(df.columns)
+>>> for idx in range(len(labels)):
+...     labels[idx] = labels[idx].replace(' ', '_')
+...
+>>> df.columns = labels
+```
+Most of the time, this approach is already much better. However, there
+is an even cooler, more concise way: Pandas's convenient `str` method:
+```
+>>> df.columns = df.columns.str.replace(' ', '_')
+```
+Another very concise way is to use the following list comprehension:
+```
+df.columns = [label.replace(' ', '_') for label in df.columns]
+```
+All of the above lead to the following result:
+```
+>>> print(df)
+   column_one  column_two
+0           1           3
+1           2           4
+```
+
 ## 2020-08-26 - Remove the Middle Item of a List of Odd Length
 
 ```
