@@ -1,6 +1,18 @@
 # python-diary
 Some useful notes on Python.
 
+## 2020-09-10 - Type Annotations
+
+Python 3.5+ supports type annotations that you can use with tools like Mypy to write statically typed Python.
+
+```
+>>> def add_this(a: int, b: int) -> int:
+...     return a + b
+...
+>>> add_this(1, 2)
+3
+```
+
 ## 2020-08-28 - Why You Want to Avoid Loops
 
 Whenever possible, you want to use vector operations over loops.
