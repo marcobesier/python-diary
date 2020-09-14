@@ -1,6 +1,15 @@
 # python-diary
 Some useful notes on Python.
 
+## 2020-09-11 - Python's built-in HTTP server
+
+Python has a built-in HTTP server that's super handy for previewing websites.
+Simply entering
+```
+python3 -m http.server
+```
+will serve the current directory at http://localhost:8000.
+
 ## 2020-09-10 - Type Annotations
 
 Python 3.5+ supports type annotations that you can use with tools like Mypy to write statically typed Python.
