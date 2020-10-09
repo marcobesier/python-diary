@@ -5,6 +5,12 @@ Some useful notes on Python.
 
 If you're new to Python, you'll often find yourself filling a list
 
+Here is an example of a list comprehension:
+```
+list = [i + 1 for i in range(10)]
+```
+
+
 ## 2020-09-11 - Python's built-in HTTP server
 
 Python has a built-in HTTP server that's super handy for previewing websites.
