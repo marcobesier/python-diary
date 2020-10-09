@@ -1,6 +1,10 @@
 # python-diary
 Some useful notes on Python.
 
+## 2020-10-09 - List Comprehensions
+
+If you're new to Python, you'll often find yourself filling a list
+
 ## 2020-09-11 - Python's built-in HTTP server
 
 Python has a built-in HTTP server that's super handy for previewing websites.
