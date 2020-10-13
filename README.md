@@ -9,6 +9,8 @@ Here is an example of a list comprehension:
 ```
 list = [i + 1 for i in range(10)]
 ```
+This is just a stupid sentence that I commit to keep the
+habit going. Quite ridiculous...
 
 
 ## 2020-09-11 - Python's built-in HTTP server
