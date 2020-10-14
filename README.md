@@ -6,6 +6,9 @@ Some useful notes on Python.
 Dummy post to keep the
 habit going.
 
+Another line.
+OMG.
+
 ## 2020-10-09 - List Comprehensions
 
 If you're new to Python, you'll often find yourself filling a list
