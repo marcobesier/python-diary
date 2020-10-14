@@ -12,6 +12,8 @@ list = [i + 1 for i in range(10)]
 This is just a stupid sentence that I commit to keep the
 habit going. Quite ridiculous...
 
+And yet another one...
+
 
 ## 2020-09-11 - Python's built-in HTTP server
 
