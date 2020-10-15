@@ -1,14 +1,6 @@
 # python-diary
 Some useful notes on Python.
 
-## 2020-10-14 - Dummy post
-
-Dummy post to keep the
-habit going.
-
-Another line.
-OMG.
-
 ## 2020-10-09 - List Comprehensions
 
 If you're new to Python, you'll often find yourself filling a list
@@ -17,11 +9,8 @@ Here is an example of a list comprehension:
 ```
 list = [i + 1 for i in range(10)]
 ```
-This is just a stupid sentence that I commit to keep the
-habit going. Quite ridiculous...
 
-And yet another one...
-
+This is a simple shortcut for the much longer expression:
 
 ## 2020-09-11 - Python's built-in HTTP server
 
