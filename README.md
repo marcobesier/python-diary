@@ -12,6 +12,12 @@ list = [i + 1 for i in range(10)]
 
 This is a simple shortcut for the much longer expression:
 
+```
+list = []
+for i in range(10):
+    list.append(i+1)
+```
+
 ## 2020-09-11 - Python's built-in HTTP server
 
 Python has a built-in HTTP server that's super handy for previewing websites.
