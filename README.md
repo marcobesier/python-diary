@@ -1,6 +1,11 @@
 # python-diary
 Some useful notes on Python.
 
+## 2020-11-27 - Pythonic Loops
+
+Here are some notes on writing more
+Pythonic loops:
+
 ## 2020-10-09 - List Comprehensions
 
 If you're new to Python, you'll often find yourself filling a list
